@@ -32,7 +32,7 @@
     "singleQuote": true,
     "trailingComma": "es5"
   },
-  "name": "simplestate",
+  "name": "@arashes/simplestate",
   "author": "arashray",
   "module": "dist/simplestate.esm.js",
   "size-limit": [
