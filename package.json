@@ -34,6 +34,9 @@
   },
   "name": "@arashes/simplestate",
   "author": "arashray",
+  "publishConfig": {
+    "access": "public"
+  },
   "module": "dist/simplestate.esm.js",
   "size-limit": [
     {
