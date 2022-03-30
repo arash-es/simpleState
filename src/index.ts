@@ -98,7 +98,7 @@ let setterObserver = <T>(subscribersRefs: WeakSet<Subscriber>) => (
   return true;
 };
 
-export class Store<T extends object> {
+export class SimpleState<T extends object> {
   private d: T;
   private s: WeakSet<Subscriber>;
 
@@ -123,8 +123,8 @@ export class Store<T extends object> {
   }
 
   subscribe<G = T>(
+    selectorString: string & NestedKeyOf<T>,
     callbackFn: Subscriber<G> | Omit<Subscriber<G>, typeof subscriberIdSymbol>,
-    selectorString?: string & NestedKeyOf<T>
   ) {
     let self = this;
     let keys = selectorStringToKeysArray(selectorString);
